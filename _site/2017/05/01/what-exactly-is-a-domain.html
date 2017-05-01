@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>What exactly is a Domain?</title>
+  <meta name="description" content="I’ve been lucky enough to be part of a team which is growing rapidly and is convinced that the best way of managing the complexity of our system is applying ...">
+
+  <link rel="stylesheet" href="/assets/main.css">
+  <link rel="canonical" href="/2017/05/01/what-exactly-is-a-domain.html">
+  <link rel="alternate" type="application/rss+xml" title="Notes on Software &amp; Design" href="/feed.xml">
+
+  
+</head>
+
+
+  <body>
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">What exactly is a Domain?</h1>
+    <p class="post-meta">
+      <time datetime="2017-05-01T00:00:00+02:00" itemprop="datePublished">
+        
+        May 1, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I’ve been lucky enough to be part of a team which is growing rapidly
+and is convinced that the best way of managing the complexity of our
+system is applying Domain Driven Design practices.</p>
+
+<p>This is the first time that the team has tried to apply DDD to
+a project. This is true also for me, even though I’m one of the greatest
+(and most annoying) supporters of the idea.</p>
+
+<p>It stroked me as peculiar that one of the confusion that has arisen in the
+whole process is particularly the word: <em>Domain</em>.</p>
+
+<p>So, what exactly is a domain? In the <a href="https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/ref=sr_1_1?ie=UTF8&amp;qid=1493644523&amp;sr=8-1&amp;keywords=domain+driven+design" title="Domain Driven Design">Big Blue Book</a> a domain is:</p>
+<blockquote>
+  <p>A sphere of knowledge, influence, or activity.</p>
+</blockquote>
+
+<p>This is, in practice, the whole activity of the business. The problem that we’re 
+trying to solve with our efforts. For example, if you’re
+into the selling sausages business the whole domain could be:</p>
+<ul>
+  <li>The Ordering System where users could buy the product.</li>
+  <li>Inventory system.</li>
+  <li>Priority System to know where to deliver first.</li>
+  <li>Decision support systems which track data.</li>
+  <li>…</li>
+</ul>
+
+<p>Now, this could be represented in a Context Map:</p>
+
+<p><img src="/assets/img/what-exactly-is-a-domain/1.png" alt="image-title-here" /></p>
+
+<p>On the other hand, it could be also though as one of the areas of it. In the
+sausage example, any system which represents a part of the whole business but
+only if we work on the perspective of this problem. For the whole, these are
+subdomains. They don’t represent all the processes of the organization just a
+part of it.</p>
+
+<p>When we’re applying DDD we’re working on a Domain problem which we model with
+Domain Models and we do our best in representing the rules of the business with
+the code we write.</p>
+
+<p>In summary, a <em>Domain</em> depends on the perspective we’re designing our system:
+in the whole, the forest perspective, the domain is the whole business we’re in.
+If we’re working on some subsystem, either fundamental or support for the business,
+that will be our domain.</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main>
+
+  </body>
+
+</html>
