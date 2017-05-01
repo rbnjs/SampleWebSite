@@ -38,7 +38,7 @@ git push -f -q $ORIGIN_CREDENTIALS gh-pages
 
 # Move back to previous branch.
 git checkout -
-#bower install
+bower install
 
 echo "Deployed Successfully!"
 

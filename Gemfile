@@ -11,6 +11,7 @@ ruby "2.2.3"
 # Happy Jekylling!
 gem "jekyll", "3.4.3"
 
+gem 'html-proofer'
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "motherfucking-jekyll-theme", "~> 0.1"
