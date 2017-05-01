@@ -13,4 +13,4 @@ bundle update
 
 # Set up JS dependencies via Bower.
 bower --version > /dev/null || npm install -g bower
-bower install
+bower install || cat "Bower not needed" 
