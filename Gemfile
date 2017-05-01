@@ -11,6 +11,7 @@ ruby "2.2.3"
 # Happy Jekylling!
 gem "jekyll", "3.4.3"
 
+
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "motherfucking-jekyll-theme", "~> 0.1"
 
@@ -21,6 +22,7 @@ gem "motherfucking-jekyll-theme", "~> 0.1"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
    gem "jekyll-feed", "~> 0.6"
+   gem "jekyll-compose"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
