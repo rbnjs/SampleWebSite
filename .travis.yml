@@ -1,8 +1,8 @@
 language: ruby
 rvm:
 - 2.2.3
-#install:
-#- "./bin/setup"
+install:
+- "./bin/setup"
 script:
 - bundle exec jekyll build --trace
 - bundle exec htmlproofer ./_site --only-4xx --allow-hash-href
