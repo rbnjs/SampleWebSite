@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+- 2.4.0
+install:
+- "./bin/setup"
+script:
+- bundle exec jekyll build --trace
+- bundle exec htmlproofer ./_site --only-4xx --allow-hash-href
+after_success:
+- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && "./bin/automated"
+env:
+  global:
+  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
+  - USERNAME: RubenSerradas
+  - EMAIL: rubenserradas@gmail.com
+  - secure: ySr610TAuYl2n3Tjn8BmqMf2SmPebLQ61+GxsqhtHRJqz9TdYeZw3zEOTABeh0GC31dW8gEkMEsnGi6WjnB8daC8Npj8T0boD1R6S0YuydPg12X1aUoasqREeEIPrT+QphxIsVPqckqmecxPgP34bPN+6lqhLgwaEEhapH48oK0c+mf/GGQqdpdMoLG4nk9Af6oltQP/IgfKDr3FmbYOOXpclelOWXZWN8RdxIQBc97faBPBzUn4QTjWw6Oc2Zj4DcfM0DMYz9QPZf4PCHvhfoZNpOkxeiGFlZ2pwCyeWpkZ1g277mYp7OBI0uXHoZq94PeTRO47gzU4D4mInAd8qld4Zo7Uk5l9NquL6D+lNaszwb0LXgaADjMinHxR4mlVtW3wSHCc11CU+A1CoKbfzZbeHaGsNSOgFLxCGQ/fOGnHcjLXWbkWaZYCZFte9FY4/Oc7ljyVAeHH3VZpn7AEAnTxzbGTD9dBVSm6e7so2RuwQG4VLMMglNiYyOYUnaGo2GAOf+/P8aqG7NNzJRPovEWk1DUNYHVF5Fp0Y7EoCHDYxoNqyfLxKpzuHpj57azdtGpzx5UJ4L8I+eQXqG/ZHuq+ly7FDSBL+o2oCgyxCzM0izIUaYRNvc47ALFbb9n1JIH7Uc2W20VCZpECICr+TLlCA8mvF4RUkYiM9FYd5WA=
